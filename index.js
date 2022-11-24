@@ -1,7 +1,6 @@
 /*importamos nuestras funciones*/
 import { mostrarTabla, cantidadAlumnos, nameAlumnos, deleteLastAlumno,onlyGirls,cantidadPorGenero } from "./funciones.js";
 import {message} from "./text.js";
-
 import readline from "readline";
 
 /*configuramos la utilidad de node para que los datos se pidan y se muestren por consola.*/
@@ -41,15 +40,14 @@ function getNumberFromConsole() {
   return promise;
 }
 
+/*Arrancamos un bucle Do While para que el usuario pueda introducir los datos tantas veces como desee o pulsar un 0 u otro número para terminar*/
 
-/*Creamos un Switch para que el usuario pueda evaluar el caso que quiera seleccionar */
  let numberFromConsole;
   let counter = 0;
 
  do {
     try {
       message();
-      
       counter++;
       numberFromConsole = await getNumberFromConsole();
       
@@ -59,7 +57,7 @@ function getNumberFromConsole() {
       process.exit(0);
     }
 
-
+/*Creamos un Switch para que el usuario pueda evaluar el caso que quiera seleccionar */
 switch (numberFromConsole) {
   case 1:
   mostrarTabla()
@@ -140,8 +138,11 @@ switch (numberFromConsole) {
 
    rl.close();
     console.log("El programa ha terminado".close);
-}
+}/*Evalumamos la condición del while */
    } while (numberFromConsole !== 0 );
-    rl.close();
+     
+
+
+    
 
 
