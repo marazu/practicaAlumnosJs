@@ -1,5 +1,5 @@
 /*importamos nuestras funciones*/
-import { mostrarTabla, cantidadAlumnos, nameAlumnos, deleteLastAlumno,onlyGirls,cantidadPorGenero } from "./funciones.js";
+import { mostrarTabla, cantidadAlumnos, nameAlumnos, onlyGirls,removeAlumno, cantidadPorGenero, alumnRandom, sonChicas, entreEdades } from "./funciones.js";
 import {message} from "./text.js";
 import readline from "readline";
 
@@ -26,7 +26,7 @@ const isInt2 = (str) => {
 // productor 
 function getNumberFromConsole() {
   const promise = new Promise((resolve, reject) => {
-    rl.question("Introduce un número: ", (num) => {
+    rl.question(" Introduce un número: ", (num) => {
       rl.pause();
       if (isInt(num)) {
         num = Number.parseInt(num);
@@ -72,12 +72,11 @@ switch (numberFromConsole) {
     break;
 
   case 4:
-    deleteLastAlumno();
+    removeAlumno();
     break;
 
   case 5:
-    
-    console.log("Número 3 en una cadena");
+   alumnRandom();
     break;
 
   case 6:
@@ -88,10 +87,10 @@ switch (numberFromConsole) {
     cantidadPorGenero();
     break;
 
-  case "8":
-    numberFromConsole == 2;
-    console.log("Número 3 en una cadena");
+  case 8:
+    sonChicas();
     break;
+    
   case "9":
     numberFromConsole == 2;
     console.log("Número 3 en una cadena");

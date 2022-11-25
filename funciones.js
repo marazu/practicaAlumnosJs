@@ -1,3 +1,4 @@
+
 const students = [{
   age: 32,
   examScores: [],
@@ -78,39 +79,88 @@ const availableFemaleNames = ['cecilia', 'ana', 'luisa', 'silvia', 'isabel', 'vi
 const availableGenders = ['male', 'female'];
 
 /*Mis funciones*/
-
+//case 1
 export function mostrarTabla() {
     console.table(students);
   }
- 
+ //case2
 export function cantidadAlumnos() {
-  let result = availableMaleNames.length +     availableFemaleNames.length;
-    console.log(result);
+ 
+console.log('\n Hay',students.length, "Alumnos en clase");
+    
   }
-
+//case 3
 export  function nameAlumnos() {
-    console.log(availableFemaleNames + (" ") + availableMaleNames);
-  }
+  const allNames= students.map(function(student) {
+    return student.name;
+  
+});
+    console.log(allNames);
+}
 
+//case 4
+export function removeAlumno(){
+  const allNames= students.map(function(student) {
+    return student.name;
+    });
+  allNames.pop();
+  console.log(allNames);
+}
 
-export function deleteLastAlumno() {
-    availableMaleNames.pop();
-    let ultimo = (availableFemaleNames + availableMaleNames);
-    console.log(ultimo);
-  }
+//case 5
+export function alumnRandom() { 
+  let allNames= students.filter(function(student) {
+      let randomElem = students[Math.floor(Math.random() * students.length)];
+    return student;
+  });
+  allNames.pop();
+console.log(allNames);
 
-  export function onlyGirls(){
-    const soloChicas = students.slice(6, 12);
-    console.log(soloChicas);
-  }
+}
+//case 6
+export function onlyGirls(){
+  const allNames= students.filter(function(student) {
+    return student.gender=='female';
+  });
+  console.log(allNames);
+}
+  
+//case 7
+export function cantidadPorGenero() {
+ const girls = students.filter(function(student) {
+    return  student.gender=='female';
+  
+  });
+  console.log(girls.length, "Chicas");
 
-  export function cantidadPorGenero() {
-    let result = availableMaleNames.length;
-    let result2 = availableFemaleNames.length;
-    console.log("Chicos", result);
-    console.log("Chicas", result2);
+  const boys = students.filter(function(student) {
+    return  student.gender=='male';
+  
+  });
+  console.log(boys.length,"Chicos");
+}
+
+//case 8
+export function sonChicas(){
+  if (students.gender=='female'){
+    return true;   
+    console.log("True");
   }
-export function edad(){
+  else if (students !='female'){
+    return false;
+    console.log("False");
+  }
+}
+//case 9
+export function entreEdades (){
+  const allNames= students.map(function(student) {
+    
+    return student.name;
+  
+});
+    console.log(allNames);
+}
+
 
   
-}
+
