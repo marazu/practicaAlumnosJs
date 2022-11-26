@@ -1,7 +1,7 @@
 Classroom management
 
 
-Requisitos indispensables
+*************Requisitos indispensables*************************
 1- Mostrar en formato de tabla todos los alumnos.
 2- Mostrar por consola la cantidad de alumnos que hay en clase.
 3- Mostrar por consola todos los nombres de los alumnos.
@@ -12,12 +12,11 @@ Requisitos indispensables
 8- Mostrar true o false por consola si todos los alumnos de la clase son chicas.
 9- Mostrar por consola los nombres de los alumnos que tengan entre 20 y 25 años.
 10- Añadir un alumno nuevo con los siguientes datos:
-nombre aleatorio.
-edad aleatoria entre 20 y 50 años.
-género aleatorio.
-listado de calificaciones vacío.
-¡OJO!, el nombre y el género tienen que ir acordes.
-
+-nombre aleatorio.
+-edad aleatoria entre 20 y 50 años.
+-género aleatorio.
+-listado de calificaciones vacío.
+(¡OJO!, el nombre y el género tienen que ir acordes.)
 11- Mostrar por consola el nombre de la persona más joven de la clase.
 ¡OJO!, si varias personas de la clase comparten la edad más baja, cualquiera de ellos es una respuesta válida.
 

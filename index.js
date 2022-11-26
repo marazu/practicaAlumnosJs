@@ -1,4 +1,5 @@
 /*importamos nuestras funciones*/
+
 import { mostrarTabla, cantidadAlumnos, nameAlumnos, onlyGirls,removeAlumno, cantidadPorGenero, alumnRandom, sonChicas, entreEdades } from "./funciones.js";
 import {message} from "./text.js";
 import readline from "readline";
@@ -91,11 +92,11 @@ switch (numberFromConsole) {
     sonChicas();
     break;
     
-  case "9":
-    numberFromConsole == 2;
-    console.log("Número 3 en una cadena");
+  case 9:
+    entreEdades();
     break;
-  case "10":
+    
+  case 10:
     numberFromConsole == 2;
     console.log("Número 3 en una cadena");
     break;

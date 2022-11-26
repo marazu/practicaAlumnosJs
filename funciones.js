@@ -24,19 +24,19 @@ const students = [{
   name: 'leo'
 },
 {
-  age: 31,
+  age: 21,
   examScores: [],
   gender: 'male',
   name: 'francisco'
 },
 {
-  age: 34,
+  age: 23,
   examScores: [],
   gender: 'male',
   name: 'carlos'
 },
 {
-  age: 29,
+  age: 22,
   examScores: [],
   gender: 'female',
   name: 'silvia'
@@ -74,93 +74,76 @@ const students = [{
 },
 ]
 
-const availableMaleNames = ['pepe', 'juan', 'victor', 'Leo', 'francisco', 'carlos'];
+/*const availableMaleNames = ['pepe', 'juan', 'victor', 'Leo', 'francisco', 'carlos'];
 const availableFemaleNames = ['cecilia', 'ana', 'luisa', 'silvia', 'isabel', 'virginia'];
-const availableGenders = ['male', 'female'];
+const availableGenders = ['male', 'female'];*/
 
 /*Mis funciones*/
 //case 1
 export function mostrarTabla() {
-    console.table(students);
-  }
- //case2
+  console.table(students);
+}
+//case2
 export function cantidadAlumnos() {
- 
-console.log('\n Hay',students.length, "Alumnos en clase");
-    
-  }
+
+  console.log('\n Hay', students.length, "Alumnos en clase");
+
+}
 //case 3
-export  function nameAlumnos() {
-  const allNames= students.map(function(student) {
-    return student.name;
-  
-});
-    console.log(allNames);
+
+export function nameAlumnos() {
+  const student = students.map(function(allNames) {
+    return allNames.name;
+  })
+  console.log(student);
 }
 
 //case 4
-export function removeAlumno(){
-  const allNames= students.map(function(student) {
-    return student.name;
-    });
-  allNames.pop();
-  console.log(allNames);
+export function removeAlumno() {
+  //Elimina el útimo alumno de la lista
+  console.log(students.pop());  
 }
 
 //case 5
-export function alumnRandom() { 
-  let allNames= students.filter(function(student) {
-      let randomElem = students[Math.floor(Math.random() * students.length)];
-    return student;
-  });
-  allNames.pop();
-console.log(allNames);
-
+export function alumnRandom() {
+  const student = students[Math.floor(Math.random() * students.length)];
+  //intentar comprender las funciones flechas
+  const resultado = students.filter(studen => studen != student);
+  console.log(resultado);
 }
+
 //case 6
-export function onlyGirls(){
-  const allNames= students.filter(function(student) {
-    return student.gender=='female';
+export function onlyGirls() {
+  const allNames = students.filter(function(student) {
+    return student.gender == 'female';
   });
   console.log(allNames);
 }
-  
+
 //case 7
 export function cantidadPorGenero() {
- const girls = students.filter(function(student) {
-    return  student.gender=='female';
-  
+  const girls = students.filter(function(student) {
+    return student.gender == 'female';
   });
-  console.log(girls.length, "Chicas");
-
+console.log(girls.length, "Chicas");
   const boys = students.filter(function(student) {
-    return  student.gender=='male';
-  
+    return student.gender == 'male';
   });
-  console.log(boys.length,"Chicos");
+console.log(boys.length, "Chicos");
 }
 
 //case 8
-export function sonChicas(){
-  if (students.gender=='female'){
-    return true;   
-    console.log("True");
-  }
-  else if (students !='female'){
-    return false;
-    console.log("False");
-  }
+export function sonChicas() {
+  const student = students.map(el => el.gender);
+  console.log(student.includes("male")); 
 }
+
 //case 9
-export function entreEdades (){
-  const allNames= students.map(function(student) {
-    
-    return student.name;
-  
-});
-    console.log(allNames);
+export function entreEdades() {
+  const student = students.filter(el => el.age >= 20 && el.age <= 25);
+    console.log(student);
 }
 
 
-  
+
 
