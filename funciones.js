@@ -238,18 +238,3 @@ export function studentsAlphabetically() {
 }
 
 //case 16
-function mostrarMejorAlumno(){
-  
-      //Llamamos al método que nos devolverá un objeto con la nota media del mejor alumno y su indice
-      let notes= getMejorNotaeIndiceAlumno();
-      //Si la mejor nota tiene un -1 como valor es que aun no se ha introducido ninguna nota
-      if(datosMejorAlumno.mejorNota == -1){
-          console.log('Aún no se ha introducido ninguna nota a ningún alumno');
-      }else{
-          //Accedemos al mejor alumno e imprimimos sus datos
-          let mejorAlumno = students[notes.index];
-          console.log('El alumno con las mejores notas (mejor media) és:');
-          console.log(mejorAlumno);
-      }
-  }
-}
