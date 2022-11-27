@@ -1,5 +1,4 @@
 /*importamos nuestras funciones*/
-
 import * as myFunction from './funciones.js';
 import { message } from "./text.js";
 import readline from "readline";
@@ -33,7 +32,7 @@ function getNumberFromConsole() {
         num = Number.parseInt(num);
         resolve(num);
       } else {
-        reject("Please, You have to enter a number");
+        reject("Please, You have to enter a number or enter 0 for end");
       }
     });
   });
@@ -55,7 +54,9 @@ do {
 
 
   } catch (error) {
+
     console.log(error);
+
     process.exit(0);
   }
 
@@ -98,7 +99,7 @@ do {
       break;
 
     case 10:
-      console.log("No se hacerlo")
+      myFunction.newStudent();
       break;
 
     case 11:
@@ -114,31 +115,30 @@ do {
       break;
 
     case 14:
-      console.log("No se hacerlo");
+      myFunction.addNotes();
       break;
 
     case 15:
       myFunction.studentsAlphabetically();
       break;
 
-    case "16":
-      numberFromConsole == 2;
-      console.log("Número 3 en una cadena");
+    case 16:
+       console.log("Número 3 en una cadena");
       break;
-    case "17":
-      numberFromConsole == 2;
-      console.log("Número 3 en una cadena");
-      break;
-    case "18":
-      numberFromConsole == 2;
+
+    case 17:
       console.log("Número 3 en una cadena");
       break;
 
+    case 18:
+      console.log("Número 3 en una cadena");
+      break;
 
     default:
+      console.log("Ha finalizado");
       rl.close();
-     /* console.log("El programa ha terminado".close);*/
-  }/*Evalumamos la condición del while */
+    
+  }
 } while (numberFromConsole > 0 && numberFromConsole <= 18);
 
 
